@@ -1,0 +1,282 @@
+/* Existing Poppins Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap");
+/* Added Logo Font (Orbitron) */
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #fafaff;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+main {
+  background: #151418;
+  background-image: url('../public/blob-haikei.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  background-color: transparent;
+  transition: 0.2s ease-in;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+.btn {
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-weight: 400;
+  outline: none;
+}
+
+.btn-shadow {
+  box-shadow: 0px 2px 5px rgba(160, 170, 180, 0.6);
+}
+
+.btn-shadow:hover {
+  box-shadow: 0px 3px 8px rgba(160, 170, 180, 0.9);
+}
+
+.PrimaryBtn {
+  padding: 12px 20px;
+  border: none;
+  background: rgb(57, 134, 250);
+  color: #f6f6f6;
+}
+
+.SecondaryBtn {
+  padding: 10px 18px;
+  border: 2px solid rgb(57, 134, 250);
+  color: #010606;
+  margin-right: 1rem;
+}
+
+.PrimaryBtn:hover {
+  background: rgb(18, 111, 250);
+}
+
+.SecondaryBtn:hover {
+  background: #e7f1fa;
+  color: #000;
+}
+
+.Container {
+  max-width: 1000px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.BigCard {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+
+.AboutBio {
+  text-align: justify;
+  max-width: 750px;
+  margin: 0 auto;
+  color: #151418;
+  line-height: 1.6;
+}
+
+.tagline2 {
+  text-align: left;
+  max-width: 650px;
+  margin: 0;
+  color: #151418;
+  line-height: 1.6;
+}
+
+.tagline2 {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.SectionTitle {
+  font-size: 28px;
+  color: #151418;
+  font-weight: 700;
+  margin-bottom: 3.5rem;
+}
+
+.ProjectWrapper {
+  margin-top: -1rem;
+}
+
+/* 🔥 Custom Logo Styling */
+.BrandLogo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: white;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 14px;
+  text-transform: uppercase;
+  z-index: 10;
+}
+
+/* RUKHAB in blue */
+.BrandLogo .LogoPart1 {
+  color: rgb(57, 134, 250);
+}
+
+/* AMIR in gold */
+.BrandLogo .LogoPart2 {
+  color: gold;
+  margin-left: 6px;
+}
+
+/* Orbit ring rotating around text */
+.orbit-ring {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: calc(10% + 15px);
+  height: calc(100% + 20px);
+  border: 1.5px dashed rgba(57, 134, 250, 0.4);
+  border-radius: 50%;
+  animation: orbitSpin 6s linear infinite;
+  z-index: -1;
+}
+
+/* Blue line through both names */
+.BrandLogo::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: rgba(57, 134, 250, 0.7);
+  transform: translateY(-50%);
+  z-index: -2;
+  box-shadow: 0 0 6px rgba(57, 134, 250, 0.4);
+}
+
+/* Orbit rotation only */
+@keyframes orbitSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .BrandLogo {
+    font-size: 18px;
+    padding: 4px 10px;
+  }
+
+  .orbit-ring {
+    top: -6px;
+    left: -6px;
+    width: calc(100% + 12px);
+    height: calc(100% + 12px);
+  }
+
+  .BrandLogo::after {
+    height: 1.5px;
+  }
+}
+/* ✅ Hero Image Styling */
+.HeroRight img {
+  width: 95%;
+  max-width: 400px;     /* slightly wider */
+  height: auto;         /* maintain aspect ratio */
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  border: 2px solid #e0e0e0;
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out;
+  display: block;
+  margin: 0 auto;
+}
+
+.HeroRight img:hover {
+  transform: scale(1.03);
+}
+
+/* ✅ Mobile Adjustment */
+@media (max-width: 768px) {
+  .HeroRight img {
+    width: 90%;
+    max-width: 320px;   /* smaller on mobile */
+    margin-top: 1.5rem;
+  }
+
+  .HeroWrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .HeroLeft h1,
+  .HeroLeft h5 {
+    text-align: center;
+    padding: 0 1rem;
+  }
+}
+
